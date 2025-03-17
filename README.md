@@ -68,7 +68,7 @@ STEP2:
 
 Clone this GitHub repository to your VM-
 ```
-git clone -b master https://github.com/bhargavanaidu135/SamplePythonFlask.git
+git clone https://github.com/bhargavanaidu135/SamplePythonFlask.git
 cd app
 ```
 STEP3: 
