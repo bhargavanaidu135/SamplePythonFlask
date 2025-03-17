@@ -4,14 +4,14 @@ Flask App Deployment Using Docker on VM
 
 This guide will walk you through setting up a VM, building a Docker image for your Flask application, scanning the image for vulnerabilities, pushing it to a Docker registry, and running the containerized application.
 
-Table of Contents:
+## Table of Contents:
 
-Setup a VM and Install Git & Docker
-Clone the Repository
-Build the Docker Image
-Scan the Docker Image for Vulnerabilities (VA Assessment)
-Push the Docker Image to Docker Registry
-Run the Docker Container Application
+1. [Setup a Virtual Machine (VM) and Install Git & Docker](#setup-a-VM-and-install-git--docker)
+2. [Clone the Repository](#clone-the-repository)
+3. [Build the Docker Image](#build-the-docker-image)
+4. [Scan the Docker Image for Vulnerabilities (VA Assessment)](#scan-the-docker-image-for-vulnerabilities-va-assessment)
+5. [Push the Docker Image to Docker Registry](#push-the-docker-image-to-docker-registry)
+6. [Run the Docker Container Application](#run-the-docker-container-application)
 
 Pre-Requisites:
 
@@ -20,7 +20,7 @@ Access to a Docker Hub or any private Docker registry
 GitHub account for code management
 Basic knowledge of Docker and Python Flask
 
-STEP1: Setup a VM and Install Git & Docker
+STEP1: ## Setup a VM and Install Git & Docker
 
 Install Git-
 ```
@@ -62,14 +62,14 @@ sudo usermod -aG docker $USER
 docker --version
 ```
 
-STEP2: Clone the Repository
+STEP2: ## Clone the Repository
 
 Clone this GitHub repository to your VM-
 ```
 git clone -b master https://github.com/bhargavanaidu135/SamplePythonFlask.git
 cd app
 ```
-STEP3: Build the Docker Image
+STEP3: ## Build the Docker Image
 
 Ensure your Dockerfile is present in the root directory of the project. When you build a docker image tag the image with version number (v1.0) and Latest tag which is used by container currently.
 Maintain the docker image tags as latest and v1.0 for an image each time it is built with new code.
@@ -80,7 +80,7 @@ docker build -t bhargav135/flask-app:latest
 docker build -t bhargav135/flask-app:v1.0
 ```
 
-STEP4: Scan the Docker Image for Vulnerabilities (VA Assessment)
+STEP4: ## Scan the Docker Image for Vulnerabilities (VA Assessment)
 
 use TRIVY tool to scan the image
 
@@ -95,7 +95,7 @@ Important: Fix high and critical vulnerabilities as much as possible before push
 ```
 trivy image bhargav135/flask-app:v1.0
 ```
-STEP5: Push the Docker Image to Docker Registry
+STEP5: ## Push the Docker Image to Docker Registry
 
 Login to Docker Hub-
 create PAT --> go to https://hub.docker.com --> login to your account --> go to account settings --> Generate a Personal Access Token with READONLY access --> copy and save it in a secure place for feature use.
@@ -112,7 +112,7 @@ docker push bhargav135/flask-app:v1.0
 docker push bhargav135/flask-app:latest
 ```
 
-STEP6: Run the Docker Container Application
+STEP6: ## Run the Docker Container Application
 
 Run the container-
 
