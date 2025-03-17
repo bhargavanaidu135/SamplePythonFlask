@@ -128,7 +128,7 @@ docker run -dt --name <containerName_FlaskApp> -p 8443:80 bhargav135/flask-app:l
 docker ps
 ```
 
-After successful following steps and running of containerized application, will be able to see that the app is giving exact response by browsing the "<PublicIP>:8443" or using `curl localhost:80` as shown below
+After successful executing of these steps and running of containerized application, will be able to see that the app is giving exact response by browsing the "<PublicIP>:8443" or using `curl localhost:80` as shown below
 flask-app response
 
 
