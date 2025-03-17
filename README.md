@@ -129,8 +129,9 @@ docker ps
 ```
 
 After successful following steps and running of containerized application, will be able to see that the app is giving exact response by browsing the "<PublicIP>:8443" or using `curl localhost:80` as shown below
-
 flask-app response
+
+
 ![image](https://github.com/user-attachments/assets/e40c47f2-7086-463b-8ab3-23932884e78a)
 
 
