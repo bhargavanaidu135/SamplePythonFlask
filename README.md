@@ -15,10 +15,10 @@ This guide will walk you through setting up a VM, building a Docker image for yo
 
 Pre-Requisites:
 
-A Virtual Machine (Eg: AWS EC2, Azure VM, Google Compute Engine, or local VM)
-Access to a Docker Hub or any private Docker registry
-GitHub account for code management
-Basic knowledge of Docker and Python Flask
+- A Virtual Machine (Eg: AWS EC2, Azure VM, Google Compute Engine, or local VM)
+- Access to a Docker Hub or any private Docker registry
+- GitHub account for code management
+- Basic knowledge of Docker and Python Flask
 
 STEP1:
 ## Setup a VM and Install Git & Docker
