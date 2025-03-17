@@ -94,7 +94,7 @@ sudo apt install wget -y
 wget https://github.com/aquasecurity/trivy/releases/latest/download/trivy_0.50.1_Linux-64bit.deb  
 sudo dpkg -i trivy_0.50.1_Linux-64bit.deb  
 ```
-Scan the image-
+Scan the image-  
 Important: Fix high and critical vulnerabilities as much as possible before pushing to registry.
 ```
 trivy image bhargav135/flask-app:v1.0
