@@ -74,8 +74,8 @@ cd app
 STEP3: 
 ## Build the Docker Image
 
-Ensure your Dockerfile is present in the root directory of the project. When you build a docker image tag the image with version number (v1.0) and Latest tag which is used by container currently.
-Maintain the docker image tags as latest and v1.0 for an image each time it is built with new code.
+Ensure your Dockerfile is present in the root directory of the project. When you build a docker image tag the image with version number (v1.0) and Latest tag which is used by container currently.  
+Maintain the docker image tags as latest and v1.0 for an image each time it is built with new code.  
 Format of image tag during image build- `docker build -t <DockerHubUserName>/<ImageName>:v1.0`
 
 ```
@@ -103,8 +103,9 @@ STEP5:
 ## Push the Docker Image to Docker Registry
 
 Login to Docker Hub-
-create PAT --> go to https://hub.docker.com --> login to your account --> go to account settings --> Generate a Personal Access Token with READONLY access --> copy and save it in a secure place for feature use.
-Instead of directly exposing docker hub credentials on the CLI, it's a best practice to use them as environment variables
+create PAT --> go to https://hub.docker.com --> login to your account --> go to account settings --> Generate a Personal Access Token with READONLY access --> copy and save it in a secure place for feature use.  
+Instead of directly exposing docker hub credentials on the CLI, it's a best practice to use them as environment variables.
+
 ```
 export DOCKERHUB_PAT="<your-personal-access-token>"
 echo $DOCKERHUB_PAT | docker login -u bhargav135 --password-stdin
