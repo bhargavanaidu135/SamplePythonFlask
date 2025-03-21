@@ -102,13 +102,13 @@ trivy image bhargav135/flask-app:v1.0
 STEP5: 
 ## Push the Docker Image to Docker Registry
 
-Login to Docker Hub-
-create PAT --> go to https://hub.docker.com --> login to your account --> go to account settings --> Generate a Personal Access Token with READONLY access --> copy and save it in a secure place for feature use.  
+Login to Docker Hub-  
+Create PAT --> Go to https://hub.docker.com --> login to your account --> go to account settings --> Generate a Personal Access Token with READ,WRITE access --> copy and save it in a secure place for feature use.  
 Instead of directly exposing docker hub credentials on the CLI, it's a best practice to use them as environment variables.
 
 ```
 export DOCKERHUB_PAT="<your-personal-access-token>"
-echo $DOCKERHUB_PAT | docker login -u bhargav135 --password-stdin
+echo $DOCKERHUB_PAT | docker login -u <dockerUserName> --password-stdin
 unset DOCKERHUB_PAT
 ```
 Push the image-
